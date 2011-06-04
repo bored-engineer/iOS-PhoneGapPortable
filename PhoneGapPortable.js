@@ -68,24 +68,25 @@ navigator.notification.alert = function(message, alertCallback, title, buttonNam
             title: title,
             button: buttonName
         }),
-        success: function(data) {
-          console.log(data);
-        }
+        success: alertCallback
     });
 }
 alert = navigator.notification.alert;
 navigator.notification.confirm = function(message, confirmCallback, title, ButtonLabels){
+    console.log(ButtonLabels);
     ButtonLabels = ButtonLabels.split(",");
     $.ajax({
         type: 'POST',
-        url: 'http://localhost:427/alert',
+        url: 'http://localhost:427/confirm',
         data: JSON.stringify({
             message: message,
             title: title,
             button: ButtonLabels[0],
             otherbutton: ButtonLabels[1]
         }),
-        success: confirmCallback
+        success: function(data){
+            confirmCallback(data.answer);
+        }
     });
 }
 confirm = navigator.notification.confirm;
@@ -98,3 +99,12 @@ navigator.notification.vibrate = function(time){
         })
     });
 }
+$.ajax({
+    type: 'POST',
+    url: 'http://localhost:427/device',
+    data: "{}",
+    dataType: "json",
+    success: function(data){
+        window.device = data;
+    }
+});
