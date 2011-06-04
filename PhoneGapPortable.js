@@ -68,6 +68,7 @@ navigator.notification.alert = function(message, alertCallback, title, buttonNam
             title: title,
             button: buttonName
         }),
+        dataType: "json",
         success: alertCallback
     });
 }
@@ -84,7 +85,9 @@ navigator.notification.confirm = function(message, confirmCallback, title, Butto
             button: ButtonLabels[0],
             otherbutton: ButtonLabels[1]
         }),
+        dataType: "json",
         success: function(data){
+            console.log(data["answer"]);
             confirmCallback(data.answer);
         }
     });
@@ -94,6 +97,7 @@ navigator.notification.vibrate = function(time){
     $.ajax({
         type: 'POST',
         url: 'http://localhost:427/vibrate',
+        dataType: "json",
         data: JSON.stringify({
             time: time
         })
