@@ -1,0 +1,6 @@
+[submodule "Server/websocket-server"]
+	path = Server/websocket-server
+	url = git://github.com/miksago/node-websocket-server.git
+[submodule "Server/node-iOS"]
+	path = Server/node-iOS
+	url = git://github.com/TooTallNate/node-iOS.git
