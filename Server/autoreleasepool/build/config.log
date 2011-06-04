@@ -1,0 +1,17 @@
+# project  configured on Fri Jun  3 23:15:22 2011 by
+# waf 1.6.4 (abi 98, python 20601f0 on darwin)
+# using /Users/luke/Documents/waf.zip configure
+#
+----------------------------------------
+Setting top to
+/Library/WebServer/Documents/PhoneGapPortable/Server/autoreleasepool
+----------------------------------------
+Setting out to
+/Library/WebServer/Documents/PhoneGapPortable/Server/autoreleasepool/build
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/sw/bin', '/sw/sbin', '/opt/local/bin', '/opt/local/sbin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin', '/usr/X11/bin', '/usr/X11R6/bin'] var='CXX' -> '/usr/bin/g++'
+find program=['ar'] paths=['/sw/bin', '/sw/sbin', '/opt/local/bin', '/opt/local/sbin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin', '/usr/X11/bin', '/usr/X11R6/bin'] var='AR' -> '/usr/bin/ar'
+ok
+from /Library/WebServer/Documents/PhoneGapPortable/Server/autoreleasepool: Could not load the Waf tool 'node_addon' from ['/Users/luke/Documents/.waf-1.6.4-37059750328bf24b869521d97d29c0c1', '/Users/luke/Documents', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python26.zip', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/plat-darwin', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/plat-mac', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/plat-mac/lib-scriptpackages', '/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-tk', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-old', '/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload', '/Library/Python/2.6/site-packages', '/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/PyObjC', '/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/wx-2.8-mac-unicode'] (try the --download option?):
+No module named node_addon
