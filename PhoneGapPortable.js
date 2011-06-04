@@ -57,3 +57,44 @@ navigator.accelerometer.watchAcceleration = function(onSuccess, onError, options
 navigator.accelerometer.clearWatch = function(watchID){
     clearInterval(watchID);
 }
+
+navigator.notification = {};
+navigator.notification.alert = function(message, alertCallback, title, buttonName){
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:427/alert',
+        data: JSON.stringify({
+            message: message,
+            title: title,
+            button: buttonName
+        }),
+        success: function(data) {
+          console.log(data);
+        }
+    });
+}
+alert = navigator.notification.alert;
+navigator.notification.confirm = function(message, confirmCallback, title, ButtonLabels){
+    ButtonLabels = ButtonLabels.split(",");
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:427/alert',
+        data: JSON.stringify({
+            message: message,
+            title: title,
+            button: ButtonLabels[0],
+            otherbutton: ButtonLabels[1]
+        }),
+        success: confirmCallback
+    });
+}
+confirm = navigator.notification.confirm;
+navigator.notification.vibrate = function(time){
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:427/vibrate',
+        data: JSON.stringify({
+            time: time
+        })
+    });
+}
