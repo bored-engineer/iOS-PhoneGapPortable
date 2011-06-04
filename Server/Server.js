@@ -58,7 +58,7 @@ http.createServer(function (req, res) {
                 console.log(response);
                 res.writeHead(200, headers);
                 res.end(JSON.stringify({
-                    answer:response.result
+                    answer:response.options
                 }));
             });
         });
